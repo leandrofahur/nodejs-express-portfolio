@@ -24,6 +24,8 @@ One can easily choose to run the application with node by typing into one's term
 $ npm run start
 ```
 
+<br>
+
 <h2>📝 <strong>References</strong></h2>
 <ol>
   <p>MDN Docs</p>
