@@ -9,6 +9,18 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "pug");
 app.set("views", "views");
 
+const projects = [
+  {
+    id: "0",
+    title: "Fetch API Lab",
+    image:
+      "https://github.com/leandrofahur/nodejs-express-portfolio/tree/main/public/images/dog.jpeg",
+    description: "Fetch a dog",
+    technologies: ["Javascript"],
+    link: "https://github.com/leandrofahur/fetch-api-lab",
+  },
+];
+
 // render the main page:
 app.get("/", (req, res) => {
   res.render("index");
@@ -17,6 +29,11 @@ app.get("/", (req, res) => {
 // serve about page:
 app.get("/about", (req, res) => {
   res.render("about");
+});
+
+// serve product page:
+app.get("/project", (req, res) => {
+  res.render("project");
 });
 
 app.listen(3000, () => {
